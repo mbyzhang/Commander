@@ -9,8 +9,12 @@ from datalite.fetch import fetch_all
 from datalite.datalite_decorator import remove_from
 from string import Template
 from urllib.parse import quote
+from pathlib import Path
 
-@datalite(db_path="rules.db")
+DB_PATH = "data/rules.db"
+Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
+
+@datalite(db_path=DB_PATH)
 @dataclass
 class Rule:
     name: str
