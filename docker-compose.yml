@@ -1,0 +1,8 @@
+services:
+  commander:
+    build: .
+    restart: always
+    ports:
+      - 5000:5000
+    volumes:
+      - ./data:/usr/src/app/data

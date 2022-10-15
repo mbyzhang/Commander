@@ -1,0 +1,3 @@
+flask
+git+https://github.com/mbyzhang/datalite.git#egg=datalite
+uwsgi
